@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/home/suggestions/suggestions",
+    "pages/user/user",
+    "pages/mySeat/mySeat",
+    "pages/user/userInfo/userInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "图书馆",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "grey",
+    "selectedColor": "#436EEE",
+    "backgroundColor": "white",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./icon/13.png",
+        "selectedIconPath": "./icon/16.png"
+      },
+      {
+        "pagePath": "pages/mySeat/mySeat",
+        "text": "我的座位",
+        "iconPath": "./icon/14.png",
+        "selectedIconPath": "./icon/17.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人",
+        "iconPath": "./icon/15.png",
+        "selectedIconPath": "./icon/18.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
