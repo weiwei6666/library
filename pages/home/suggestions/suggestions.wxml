@@ -1,5 +1,42 @@
 <!--pages/home/suggestions/suggestions.wxml-->
 <van-tabs active="{{ active }}" bind:change="onChange">
-  <van-tab title="读者心声">内容 1</van-tab>
+  <van-tab title="读者心声">
+  <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="refresh">
+  <view class="pro-con">
+    <block wx:for="{{ commentsSet}}" wx:key="{{index}}">
+      <view class="pro-box">
+        <view class="head">
+          <image class="img" src="{{item.avartar}}" mode="aspectFit"></image>
+          <view class="box">
+            <view class="shead clear">
+              <view class="names fl">{{item.name}}
+
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="addr-info">
+          <view class="addr-text">
+            {{item.detail}}
+          </view>
+        </view>
+        <view class="info">
+          <view class="text">
+            <text decode="true">{{item.time}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+<form bindsubmit="submitForm" report-submit="true">
+  <view class="release">
+    <view class="replyinfo2">
+      <textarea placeholder-class="input_null" fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" placeholder="请输入留言" name="comment"></textarea>
+      <button form-type="submit" class="submit">留言</button>
+    </view>
+  </view>
+</form>
+  </van-tab>
   <van-tab title="馆方回复">内容 2</van-tab>
 </van-tabs>

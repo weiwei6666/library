@@ -1,21 +1,23 @@
 // pages/home/suggestions/suggestions.js
+const app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    active: 1,
+    active: 0,
     user_id: null, //用户ID
     library_name: '华南理工大学图书馆',
     library_avater: '',
 
     commentsSet: [{
       user_id: '',
-      avartar: '',
+      avartar: "",
       name: '',
-      time: '',
-      detail: '',
+      time: '两天前',
+      detail: '你猜',
       click_num: null,
       if_click: null
     },
@@ -48,7 +50,7 @@ Page({
       });
     } else if (event.detail.index == 1){
       wx.showToast({
-        title: `官方回复`,
+        title: `馆方回复`,
         icon: 'none'
       });
     }
@@ -59,6 +61,7 @@ Page({
   */
   onLoad: function (options) {
     var that = this;
+    
     // that.getComments();
     // that.getResponds();
 
