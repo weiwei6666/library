@@ -1,2 +1,5 @@
 <!--pages/home/suggestions/suggestions.wxml-->
-<text>回音壁</text>
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="读者心声">内容 1</van-tab>
+  <van-tab title="馆方回复">内容 2</van-tab>
+</van-tabs>
